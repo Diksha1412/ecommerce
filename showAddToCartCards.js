@@ -13,9 +13,6 @@ let filterProducts = products.filter((curProd) => {
 
 console.log(filterProducts);
 
-// -----------------------------------------------------
-// to update the addToCart page
-// --------------------------------------------------------
 const cartElement = document.querySelector("#productCartContainer");
 const templateContainer = document.querySelector("#productCartTemplate");
 
@@ -36,8 +33,6 @@ const showCartProduct = () => {
       lSActualData.quantity;
     productClone.querySelector(".productPrice").textContent =
       lSActualData.price;
-
-    // handle increment and decrement button
     productClone
       .querySelector(".stockElement")
       .addEventListener("click", (event) => {
@@ -52,12 +47,7 @@ const showCartProduct = () => {
   });
 };
 
-// -----------------------------------------------------
-// Showing the cartProducts
-// --------------------------------------------------------
 showCartProduct();
 
-// -----------------------------------------------------
-// calculating the card total in our cartProducts page
-// --------------------------------------------------------
+
 updateCartProductTotal();
